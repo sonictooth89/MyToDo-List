@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>My To Do</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" index.htmlintegrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <nav class="navbar" style="background-color: #e3f2fd;"">
@@ -12,19 +13,18 @@
           <a class="navbar-brand"><h1>My to do list</h1></a>
           <form class="d-flex" role="search">
             <input class="form-control me-2" id="myInput" type="search" placeholder="add item..." aria-label="Search">
-            <span class="btn btn-outline-primary" onclick="newElement()" id="addBtn" >Add</span>
+            <span class="btn btn-lg my-10 btn-outline-primary" onclick="newElement()" id="addBtn" >Add</span>
           </form>
         </div>
       </nav>
 
       <div>
-        <ul class="list-group" id="myUl">
-          <li class="list-group-item" id="myLi">
-            <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
-            <label class="form-check-label" for="firstCheckbox">First checkbox</label>
+        <ol class="list-group" id="myUl">
+          <li>
+            <!-- <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox"> -->
+            First item
           </li>
-          
-        </ul>
+        </ol>
       </div>
 
 
