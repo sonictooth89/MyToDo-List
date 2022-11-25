@@ -1,21 +1,19 @@
 // odczytanie wszystkich elementow z lokal storage
 
-
-for (let i = 0; i < localStorage.length; i++) {
-        const key = localStorage.key(i);
-        items.push([key, localStorage.getItem(key)])    
-  };
-
-console.log(items);
-
-const li = document.createElement('li');
-li.setAttribute('class', 'list-group-item');
-
-items.map(
-    item => li.innerHTML = `${item[1]}`
-)
-const element = document.getElementById('myUl');
+if (localStorage != null) {
+    const entries = Object.entries(localStorage);
+    for (const entry of entries) {
+        const [key, value] = entry;
+        
+        const li = document.createElement('li');
+        li.setAttribute('class', 'list-group-item');
+        li.innerHTML= `
+                <input class="form-check-input me-1" type="checkbox" value="">
+                <label class="form-check-label">${value}</label>`
+        const element = document.getElementById('myUl');
         element.appendChild(li);
+    }
+}
 
 
 const newElement = () => {
